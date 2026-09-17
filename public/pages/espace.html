@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Détail d'un espace | ProSpace Solutions</title>
+    <meta name="description" content="Découvrez les caractéristiques, équipements, capacités et tarifs de cet espace professionnel proposé par ProSpace Solutions.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/icons/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/icons/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/icons/favicons/favicon-16x16.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="../../index.html" class="logo" aria-label="Accueil ProSpace Solutions">
+                <img src="../images/icons/logo-blanc.svg" alt="" class="logo-icon">
+                <span class="logo-text">ProSpace <strong>Solutions</strong></span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navigation principale">
+                <ul>
+                    <li><a href="../../index.html" class="nav-link">Accueil</a></li>
+                    <li>
+                        <a href="./mes-espaces.html" class="nav-link">
+                            Mes Espaces
+                            <span id="favorites-count" class="favorites-count" aria-label="Nombre d'espaces enregistrés">0</span>
+                        </a>
+                    </li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="space-page">
+        <div class="container">
+
+            <!-- FIL D'ARIANE -->
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <ol>
+                    <li><a href="../../index.html">Accueil</a></li>
+                    <li>
+                        <img src="../images/icons/chevron-droite.svg" alt="" aria-hidden="true">
+                        <span id="breadcrumb-city">Ville</span>
+                    </li>
+                    <li>
+                        <img src="../images/icons/chevron-droite.svg" alt="" aria-hidden="true">
+                        <span id="breadcrumb-name">Nom de l'espace</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- CHARGEMENT -->
+            <div id="space-loading" class="loading" role="status" aria-live="polite">
+                Chargement de l'espace...
+            </div>
+
+            <!-- ERREUR -->
+            <p id="space-error" class="error-message" role="alert" hidden>
+                Impossible de charger cet espace.
+            </p>
+
+            <!-- CONTENU DE LA FICHE -->
+            <div id="space-content" hidden>
+
+                <!-- EN-TÊTE -->
+                <section class="space-heading">
+                    <h1 id="space-name">Nom de l'espace</h1>
+
+                    <div class="space-heading-info">
+                        <p class="space-address">
+                            <img src="../images/icons/localisation.svg" alt="" aria-hidden="true">
+                            <span id="space-address">Adresse</span>
+                        </p>
+
+                        <div class="space-rating">
+                            <span id="space-stars" class="rating-stars" aria-hidden="true"></span>
+                            <strong id="space-rating">0</strong>
+                            <span>·</span>
+                            <span id="space-reviews">0 avis vérifiés</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- GALERIE -->
+                <section class="space-gallery" aria-label="Photos de l'espace">
+                    <img id="space-main-image" class="gallery-main" alt="">
+
+                    <div class="gallery-secondary">
+                        <img id="space-second-image" class="gallery-item" alt="" loading="lazy">
+                        <img id="space-third-image" class="gallery-item" alt="" loading="lazy">
+                    </div>
+                </section>
+
+                <!-- INFORMATIONS -->
+                <section class="space-details">
+
+                    <!-- COLONNE GAUCHE -->
+                    <div class="space-details-main">
+
+                        <section class="space-about">
+                            <h2>À propos de cet espace</h2>
+                            <p id="space-description">Description de l'espace.</p>
+                        </section>
+
+                        <section class="space-equipment">
+                            <h2>Équipements inclus</h2>
+                            <ul id="equipment-list" class="equipment-list">
+                                <!-- Les équipements sont générés dans espace.js -->
+                            </ul>
+                        </section>
+
+                        <section class="info-box space-capacity">
+                            <h2>Capacité &amp; Configuration</h2>
+
+                            <div class="info-box-content">
+                                <img src="../images/icons/personne-bleu.svg" alt="" class="info-box-icon" aria-hidden="true">
+
+                                <div>
+                                    <p>
+                                        Jusqu'à
+                                        <strong id="space-capacity">0 personnes</strong>
+                                    </p>
+                                    <p id="space-configuration">Configuration de l'espace.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <!-- TARIFS -->
+                    <aside class="space-pricing">
+                        <h2>Tarifs</h2>
+
+                        <table class="pricing-list">
+                            <tbody>
+                                <tr class="pricing-row">
+                                    <th scope="row">
+                                        <span>
+                                            <img src="../images/icons/horloge-grise.svg" alt="" aria-hidden="true">
+                                            À l'heure
+                                        </span>
+                                    </th>
+                                    <td>
+                                        <strong id="price-hour">-- €</strong>
+                                    </td>
+                                </tr>
+
+                                <tr class="pricing-row">
+                                    <th scope="row">
+                                        <span>
+                                            <img src="../images/icons/horloge-grise.svg" alt="" aria-hidden="true">
+                                            Demi-journée (4h)
+                                        </span>
+                                    </th>
+                                    <td>
+                                        <strong id="price-half-day">-- €</strong>
+                                    </td>
+                                </tr>
+
+                                <tr class="pricing-row">
+                                    <th scope="row">
+                                        <span>
+                                            <img src="../images/icons/horloge-contact.svg" alt="" aria-hidden="true">
+                                            Journée complète
+                                        </span>
+                                    </th>
+                                    <td>
+                                        <strong id="price-day">-- €</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- FAVORIS -->
+                        <button type="button" id="favorite-button" class="button button-favorite" aria-pressed="false">
+                            <img id="favorite-icon" src="../images/icons/favori-vide.svg" alt="" aria-hidden="true">
+                            <span id="favorite-button-text">Sauvegarder en Favoris</span>
+                        </button>
+
+                        <!-- CONTACT -->
+                        <a href="./contact.html" class="button button-primary">
+                            <img src="../images/icons/telephone-blanc.svg" alt="" aria-hidden="true">
+                            Contacter l'équipe
+                        </a>
+
+                        <p class="pricing-info">
+                            Réponse garantie sous 2h ouvrées · Sans engagement
+                        </p>
+                    </aside>
+
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../images/icons/logo-blanc.svg" alt="" class="logo-icon">
+                    <span>ProSpace <strong>Solutions</strong></span>
+                </div>
+
+                <p>
+                    Location d'espaces professionnels en France pour les entreprises et indépendants exigeants.
+                </p>
+
+                <a href="./contact.html" class="footer-contact">
+                    <img src="../images/icons/email-small.svg" alt="" aria-hidden="true">
+                    Nous contacter
+                </a>
+            </div>
+
+            <div class="footer-column">
+                <h2>Destinations</h2>
+                <ul>
+                    <li><a href="../../index.html">Espaces à Paris</a></li>
+                    <li><a href="../../index.html">Espaces à Lyon</a></li>
+                    <li><a href="../../index.html">Espaces à Bordeaux</a></li>
+                    <li><a href="../../index.html">Espaces à Nantes</a></li>
+                    <li><a href="../../index.html">Espaces à Marseille</a></li>
+                    <li><a href="../../index.html">Espaces à Toulouse</a></li>
+                    <li><a href="../../index.html">Espaces à Lille</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2>Services</h2>
+                <ul>
+                    <li>Salles de réunion</li>
+                    <li>Espaces de coworking</li>
+                    <li>Salles de formation</li>
+                    <li>Bureaux privatifs</li>
+                    <li>Studios visio</li>
+                    <li>Espaces événementiels</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2>Légal &amp; accès</h2>
+                <ul>
+                    <li>Mentions légales</li>
+                    <li>CGU &amp; CGV</li>
+                    <li>Politique de confidentialité</li>
+                    <li>Gestion des cookies</li>
+                    <li>Déclaration d'accessibilité</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 ProSpace Solutions SAS — Tous droits réservés</p>
+            <p>Conformité RGAA 4.1 · Accessibilité : partiellement conforme</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/espace.js"></script>
+
+</body>
+
+</html>

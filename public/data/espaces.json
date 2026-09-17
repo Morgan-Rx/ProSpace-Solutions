@@ -1,0 +1,247 @@
+[
+    {
+        "id": 1,
+        "nom": "Espace Wagram Opéra",
+        "ville": "Paris",
+        "localisation": "Paris 8e",
+        "adresse": "14 Avenue de Wagram, 75008 Paris",
+        "capacite": 12,
+        "note": 4.8,
+        "avis": 34,
+        "description": "Au cœur du 8e arrondissement, à deux pas de l'Arc de Triomphe, l'Espace Wagram Opéra offre un cadre premium pour vos réunions stratégiques et présentations clients. La salle est équipée d'un mobilier haut de gamme, d'une acoustique soignée et d'une lumière naturelle généreuse grâce à ses larges baies vitrées. Idéal pour les comités de direction, les sessions de négociation et les workshops en petit groupe.",
+        "equipements": [
+            "WiFi Fibre 1 Gb/s",
+            "Écran 4K 86\"",
+            "Visioconférence intégrée",
+            "Tableau blanc interactif",
+            "Accès PMR complet",
+            "Climatisation réversible",
+            "Café & eau inclus",
+            "Parking sécurisé -1"
+        ],
+        "configuration": "Configuration modulable : théâtre, classe, U, boardroom — sur demande.",
+        "tarifs": {
+            "heure": 45,
+            "demiJournee": 160,
+            "journee": 280
+        },
+        "images": [
+            "images/photos/espaces/salle-fauteuils-oranges.webp",
+            "images/photos/espaces/grande-table-reunion.webp",
+            "images/photos/espaces/open-space-flou.webp"
+        ],
+        "badges": [
+            "Fibre",
+            "PMR",
+            "4K"
+        ],
+        "filtres": {
+            "fibre": true,
+            "visioconference": true,
+            "pmr": true,
+            "cafe": true
+        }
+    },
+    {
+        "id": 2,
+        "nom": "Atelier République",
+        "ville": "Paris",
+        "localisation": "Paris 11e",
+        "adresse": "28 Rue Oberkampf, 75011 Paris",
+        "capacite": 8,
+        "note": 4.6,
+        "avis": 51,
+        "description": "Espace créatif et modulable installé dans un loft rénové du quartier de la République. Baigné de lumière zénithale, l'Atelier convient aux workshops collaboratifs, séances de design thinking ou sessions de formation en petits groupes. Son aménagement flexible permet de passer d'une configuration classe à un espace debout en quelques minutes.",
+        "equipements": [
+            "WiFi Fibre 500 Mb/s",
+            "Écran 4K 75\"",
+            "Tableau blanc magnétique",
+            "Cuisine équipée",
+            "Terrasse privative",
+            "Lumière naturelle zénithale"
+        ],
+        "configuration": "Configuration modulable : théâtre, classe, U, boardroom — sur demande.",
+        "tarifs": {
+            "heure": 35,
+            "demiJournee": 120,
+            "journee": 210
+        },
+        "images": [
+            "images/photos/espaces/grande-table-reunion.webp",
+            "images/photos/espaces/bureau-minimaliste.webp",
+            "images/photos/espaces/open-space.webp"
+        ],
+        "badges": [
+            "Fibre",
+            "4K"
+        ],
+        "filtres": {
+            "fibre": true,
+            "visioconference": false,
+            "pmr": false,
+            "cafe": false
+        }
+    },
+    {
+        "id": 3,
+        "nom": "Confluence Executive Suite",
+        "ville": "Lyon",
+        "localisation": "Lyon 2e",
+        "adresse": "12 Quai Perrache, 69002 Lyon",
+        "capacite": 20,
+        "note": 4.9,
+        "avis": 22,
+        "description": "Suite prestige avec vue sur la Saône. Conçue pour accueillir séminaires, assemblées générales et grands événements d'entreprise dans un cadre architectural remarquable. Équipements de dernière génération et service conciergerie inclus.",
+        "equipements": [
+            "WiFi Fibre 10 Gb/s",
+            "Double écran 4K 98\"",
+            "Accès PMR complet",
+            "Catering sur demande",
+            "Parking privatif 10 places",
+            "Service conciergerie",
+            "Système son Bose intégré"
+        ],
+        "configuration": "Configuration modulable : théâtre, classe, U, boardroom — sur demande.",
+        "tarifs": {
+            "heure": 55,
+            "demiJournee": 195,
+            "journee": 340
+        },
+        "images": [
+            "images/photos/espaces/bureau-minimaliste.webp",
+            "images/photos/espaces/grande-table-reunion.webp",
+            "images/photos/espaces/salle-noir-blanc.webp"
+        ],
+        "badges": [
+            "Fibre",
+            "PMR",
+            "4K"
+        ],
+        "filtres": {
+            "fibre": true,
+            "visioconference": false,
+            "pmr": true,
+            "cafe": false
+        }
+    },
+    {
+        "id": 4,
+        "nom": "Les Chartrons Board Room",
+        "ville": "Bordeaux",
+        "localisation": "Bordeaux",
+        "adresse": "5 Quai des Chartrons, 33300 Bordeaux",
+        "capacite": 16,
+        "note": 4.7,
+        "avis": 18,
+        "description": "Salle de conseil avec vue sur les quais classés au patrimoine UNESCO. Un cadre d'exception pour vos conseils d'administration et événements corporate. Mobilier en bois massif, acoustique maîtrisée et terrasse privative pour les pauses.",
+        "equipements": [
+            "WiFi Fibre 1 Gb/s",
+            "Projecteur HD 4000 lumens",
+            "Accès PMR",
+            "Terrasse privative 25m²",
+            "Cave à vins sur demande",
+            "Service traiteur local"
+        ],
+        "configuration": "Configuration modulable : théâtre, classe, U, boardroom — sur demande.",
+        "tarifs": {
+            "heure": 40,
+            "demiJournee": 145,
+            "journee": 250
+        },
+        "images": [
+            "images/photos/espaces/salle-noir-blanc.webp",
+            "images/photos/espaces/salle-fauteuils-colores.webp",
+            "images/photos/espaces/open-space.webp"
+        ],
+        "badges": [
+            "Fibre",
+            "PMR"
+        ],
+        "filtres": {
+            "fibre": true,
+            "visioconference": false,
+            "pmr": true,
+            "cafe": false
+        }
+    },
+    {
+        "id": 5,
+        "nom": "Île de Nantes Studio",
+        "ville": "Nantes",
+        "localisation": "Nantes",
+        "adresse": "3 Bd de la Prairie-au-Duc, 44200 Nantes",
+        "capacite": 6,
+        "note": 4.5,
+        "avis": 63,
+        "description": "Studio contemporain sur l'Île de Nantes, quartier créatif en pleine transformation urbaine. Idéal pour les petites équipes agiles, entretiens ou points d'avancement en format intime. Lumière naturelle et connexion ultra-rapide.",
+        "equipements": [
+            "WiFi Fibre 500 Mb/s",
+            "Écran 4K 65\"",
+            "Tableau blanc",
+            "Kitchenette équipée",
+            "Lumière naturelle",
+            "Vélos à disposition"
+        ],
+        "configuration": "Configuration modulable : théâtre, classe, U, boardroom — sur demande.",
+        "tarifs": {
+            "heure": 28,
+            "demiJournee": 95,
+            "journee": 170
+        },
+        "images": [
+            "images/photos/espaces/open-space.webp",
+            "images/photos/espaces/salle-fauteuils-colores.webp",
+            "images/photos/espaces/bureau-minimaliste.webp"
+        ],
+        "badges": [
+            "Fibre",
+            "4K"
+        ],
+        "filtres": {
+            "fibre": true,
+            "visioconference": false,
+            "pmr": false,
+            "cafe": false
+        }
+    },
+    {
+        "id": 6,
+        "nom": "Vieux-Port Panorama",
+        "ville": "Marseille",
+        "localisation": "Marseille",
+        "adresse": "1 Place aux Huiles, 13001 Marseille",
+        "capacite": 14,
+        "note": 4.4,
+        "avis": 29,
+        "description": "Face au Vieux-Port de Marseille, cette salle lumineuse offre une vue panoramique sur les navettes et le Fort Saint-Jean. Un cadre inspirant pour vos réunions d'équipe, séminaires régionaux ou lancements de projets.",
+        "equipements": [
+            "WiFi Fibre 1 Gb/s",
+            "Écran OLED 80\"",
+            "Accès PMR",
+            "Vue panoramique Vieux-Port",
+            "Service traiteur disponible",
+            "Climatisation"
+        ],
+        "configuration": "Configuration modulable : théâtre, classe, U, boardroom — sur demande.",
+        "tarifs": {
+            "heure": 38,
+            "demiJournee": 135,
+            "journee": 235
+        },
+        "images": [
+            "images/photos/espaces/open-space-flou.webp",
+            "images/photos/espaces/grande-table-reunion.webp",
+            "images/photos/espaces/salle-noir-blanc.webp"
+        ],
+        "badges": [
+            "Fibre",
+            "PMR"
+        ],
+        "filtres": {
+            "fibre": true,
+            "visioconference": false,
+            "pmr": true,
+            "cafe": false
+        }
+    }
+]

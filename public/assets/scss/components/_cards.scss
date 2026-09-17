@@ -1,0 +1,301 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// CARTES DE L'ACCUEIL
+
+.space-card {
+    @include card-style;
+    position: relative;
+    background-color: $color-background-main;
+    border: 1px solid $color-border;
+}
+
+.space-card-image {
+    width: 100%;
+    height: 295px;
+    object-fit: cover;
+    transition: transform $transition;
+}
+
+.space-card-content {
+    @include column;
+    gap: 0.5rem;
+    padding: 1.25rem;
+}
+
+.space-card h2, .space-card h3 {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+}
+
+.space-card-location {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: $color-text-discreet;
+    font-size: $font-size-sm;
+}
+
+.space-card-location img {
+    width: 13px;
+    height: 13px;
+}
+
+.space-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: $font-size-xs;
+}
+
+.stars {
+    color: $color-stars;
+    letter-spacing: 0.1rem;
+}
+
+.reviews {
+    color: $color-text-discreet;
+}
+
+.space-card-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.space-card-capacity {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: $color-text-discreet;
+    font-size: $font-size-sm;
+}
+
+.space-card-capacity img {
+    width: 13px;
+    height: 13px;
+}
+
+.space-card-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.space-card-bottom {
+    @include flex-between;
+    margin-top: $spacing-small;
+    padding-top: $spacing-small;
+    border-top: 1px solid $color-border;
+}
+
+.space-card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+}
+
+.space-card-price strong {
+    color: $color-primary;
+    font-size: $font-size-lg;
+}
+
+.space-card-price span {
+    color: $color-text-discreet;
+    font-size: $font-size-xs;
+}
+
+.space-card .button-primary {
+    padding: 0.65rem 1.25rem;
+    border-radius: 24px;
+    box-shadow: 0 0.25rem 0.5rem rgba(15, 23, 42, 0.12);
+}
+
+// Effet léger au survol de la carte
+.space-card:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-hover;
+}
+
+// Léger zoom sur l'image au survol de la carte
+.space-card:hover .space-card-image {
+    transform: scale(1.03);
+}
+
+// Bouton cœur placé au-dessus de l'image
+.card-favorite-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background-color: $color-background-main;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.card-favorite-button img {
+    width: 18px;
+    height: 18px;
+}
+
+// CARTES DES FAVORIS
+
+.favorite-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid $color-border;
+    border-radius: $radius-large;
+    background-color: $color-background-main;
+    box-shadow: 0 0.25rem 0.75rem rgba(15, 23, 42, 0.08);
+}
+
+.favorite-card-image-link {
+    width: 260px;
+    height: 170px;
+    flex-shrink: 0;
+}
+
+.favorite-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-card-content {
+    flex: 1;
+    padding: $spacing-medium;
+}
+
+.favorite-card-content h2 {
+    margin-bottom: 0.5rem;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}
+
+.favorite-card-location {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-bottom: $spacing-medium;
+    color: $color-text-discreet;
+    font-size: $font-size-sm;
+}
+
+.favorite-card-location img {
+    width: 14px;
+    height: 14px;
+}
+
+.favorite-card-info {
+    display: flex;
+    align-items: center;
+    gap: $spacing-medium;
+}
+
+.favorite-card-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: $color-text-discreet;
+    font-size: $font-size-sm;
+}
+
+.favorite-card-info img {
+    width: 14px;
+    height: 14px;
+}
+
+.favorite-card-price strong {
+    color: $color-primary;
+    font-size: $font-size-base;
+}
+
+.favorite-card-price span {
+    color: $color-text-secondary;
+}
+
+.favorite-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $color-text-secondary;
+    font-size: $font-size-xs;
+}
+
+.favorite-card-rating .stars {
+    color: $color-stars;
+}
+
+.favorite-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: $spacing-medium;
+}
+
+.favorite-card-actions .button-primary, .favorite-card-actions .remove-favorite {
+    padding: 0.65rem 1rem;
+    border-radius: 24px;
+}
+
+.remove-favorite {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-color: $color-border;
+    color: $color-text-discreet;
+}
+
+.remove-favorite img {
+    width: 15px;
+    height: 15px;
+}
+
+.card-favorite-button:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 3px;
+}
+
+// RESPONSIVE
+
+@media (max-width: $breakpoint-mobile) {
+    .space-card-image {
+        height: 240px;
+    }
+
+    .space-card-bottom {
+        gap: $spacing-small;
+    }
+
+    .favorite-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .favorite-card-image-link {
+        width: 100%;
+        height: 220px;
+    }
+
+    .favorite-card-content {
+        width: 100%;
+    }
+
+    .favorite-card-info {
+        flex-wrap: wrap;
+    }
+
+    .favorite-card-actions {
+        justify-content: flex-start;
+        padding-top: 0;
+    }
+}

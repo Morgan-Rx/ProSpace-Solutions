@@ -1,0 +1,267 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+
+// HERO
+
+.hero {
+    position: relative;
+    min-height: 600px;
+    background-image: url("../../images/photos/espaces/hero-banner.webp");
+    background-size: cover;
+    background-position: center;
+    color: $color-background-main;
+}
+
+// Dégradé sombre pour garder le texte lisible tout en laissant apparaître davantage l'image à droite
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(15, 23, 42, 1) 0%,
+        rgba(15, 23, 42, 0.95) 40%,
+        rgba(15, 23, 42, 0.8) 70%,
+        rgba(15, 23, 42, 0.55) 100%
+    );
+}
+
+.hero-container {
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.hero-content {
+    max-width: 45rem;
+}
+
+.hero h1 {
+    margin-top: $spacing-medium;
+    font-size: 3.75rem;
+    line-height: 1.1;
+    font-weight: $font-weight-extra-bold;
+}
+
+.hero h1 span {
+    color: $color-secondary;
+}
+
+.hero-description {
+    max-width: 32rem;
+    margin-top: $spacing-medium;
+    color: $color-text-on-dark;
+    font-size: $font-size-md;
+}
+
+.hero-benefits {
+    display: flex;
+    gap: $spacing-medium;
+    margin-top: $spacing-large;
+}
+
+.hero-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+}
+
+.hero-benefits img {
+    width: 15px;
+    height: 15px;
+}
+
+// FILTRES
+
+// La barre reste visible sous le header pendant le scroll.
+.filters {
+    position: sticky;
+    top: 64px;
+    z-index: 90;
+    background-color: $color-background-main;
+    border-bottom: 1px solid $color-border;
+}
+
+.filters-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 66px;
+}
+
+.filters-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.filters-heading img {
+    width: 14px;
+    height: 14px;
+}
+
+.filters-title {
+    color: $color-text-discreet;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+}
+
+.filter select {
+    padding: 0.5rem 1rem;
+    border: 1px solid $color-border;
+    border-radius: $radius-medium;
+    background-color: $color-background-main;
+    color: $color-text-main;
+    font-size: $font-size-sm;
+}
+
+.filter-options {
+    display: flex;
+    align-items: center;
+    gap: $spacing-medium;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $color-text-filter;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+}
+
+.filter-options input {
+    width: 16px;
+    height: 16px;
+}
+
+// ESPACES DISPONIBLES
+
+.spaces {
+    padding: $spacing-xl 0;
+}
+
+.spaces h2 {
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
+}
+
+.spaces-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: $spacing-medium;
+    margin-top: $spacing-medium;
+}
+
+.loading, .no-results {
+    padding: $spacing-large 0;
+    color: $color-text-secondary;
+    text-align: center;
+}
+
+// RESPONSIVE
+
+@media (max-width: $breakpoint-tablet) {
+    .hero-content {
+        max-width: 38rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .filters-container {
+        flex-wrap: wrap;
+        padding-top: $spacing-small;
+        padding-bottom: $spacing-small;
+    }
+
+    .filter-options {
+        flex-wrap: wrap;
+    }
+
+    .spaces-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: $font-size-sm;
+    }
+
+    .hero-benefits {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    // Sur mobile, les filtres ne restent plus sticky car le header devient plus haut
+    .filters {
+        position: static;
+    }
+
+    .filters-container {
+        align-items: stretch;
+    }
+
+    .filters-heading {
+        width: 100%;
+    }
+
+    .filter {
+        width: 100%;
+    }
+
+    .filter select {
+        width: 100%;
+    }
+
+    .filter-options {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: $spacing-small;
+    }
+
+    .spaces-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: $breakpoint-small-mobile) {
+    .hero-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+        line-height: 1.15;
+    }
+
+    .hero-description {
+        font-size: $font-size-sm;
+        line-height: 1.5;
+    }
+
+    .hero-benefits {
+        margin-top: $spacing-medium;
+        gap: 0.75rem;
+    }
+}

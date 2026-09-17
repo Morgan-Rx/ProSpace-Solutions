@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+// Aligne les éléments sur une ligne avec un espace entre eux
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Centre les éléments horizontalement et verticalement
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Affiche les éléments les uns sous les autres
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+// Base commune aux boutons et liens ayant l'apparence d'un bouton
+@mixin button-style {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-small;
+    cursor: pointer;
+    text-decoration: none;
+    transition: $transition;
+}
+
+// Base commune aux cartes du site
+@mixin card-style {
+    overflow: hidden;
+    border-radius: $radius-large;
+    box-shadow: $shadow-card;
+    transition: $transition;
+}

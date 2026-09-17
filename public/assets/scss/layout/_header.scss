@@ -1,0 +1,129 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Header COMMUN
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: $color-background-header-footer;
+    color: $color-background-main;
+}
+
+.header-container {
+    @include flex-between;
+    min-height: 64px;
+    padding: 0 $spacing-medium;
+}
+
+// Logo
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    background-color: $color-primary;
+    border-radius: $radius-medium;
+}
+
+.logo-text {
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+}
+
+.logo-text strong {
+    color: $color-secondary;
+}
+
+// Navigation
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.875rem;
+    border-radius: 10px;
+    color: $color-background-secondary;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $color-secondary;
+}
+
+.nav-link:hover {
+    color: $color-secondary;
+}
+
+// Nombre de favoris enregistré
+.favorites-count {
+    @include flex-center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: $color-background-main;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+}
+
+// RESPONSIVE
+
+@media (max-width: $breakpoint-mobile) {
+    .header-container {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .main-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: $breakpoint-small-mobile) {
+    .header-container {
+        gap: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .logo {
+        gap: 0.5rem;
+    }
+
+    .logo-text {
+        font-size: $font-size-base;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 0.25rem;
+        flex-wrap: nowrap;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0.6rem;
+        font-size: $font-size-xs;
+    }
+}

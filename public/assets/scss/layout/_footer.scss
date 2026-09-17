@@ -1,0 +1,119 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// FOOTER COMMUN
+
+.site-footer {
+    padding: 3.5rem 0 1.5rem;
+    background-color: $color-background-header-footer;
+    color: $color-background-main;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.footer-brand, .footer-column {
+    flex: 1;
+}
+
+// Logo et présentation de l'entreprise
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+}
+
+.footer-logo .logo-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.footer-logo strong {
+    color: $color-secondary;
+}
+
+.footer-brand p {
+    max-width: 200px;
+    margin-top: $spacing-small;
+    color: $color-text-on-dark;
+    font-size: $font-size-xs;
+    line-height: 1.6;
+}
+
+.footer-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: $spacing-small;
+    color: $color-secondary;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+}
+
+.footer-contact img {
+    width: 14px;
+    height: 14px;
+}
+
+// Colonnes de navigation du footer
+.footer-column h2 {
+    margin-bottom: $spacing-small;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.075rem;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+    color: $color-text-on-dark;
+    font-size: $font-size-xs;
+}
+
+.footer-column a:hover {
+    color: $color-secondary;
+}
+
+// Partie basse avec les informations légales
+.footer-bottom {
+    @include flex-between;
+    margin-top: $spacing-xl;
+    padding-top: $spacing-medium;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: $color-text-on-dark;
+    font-size: $font-size-xs;
+}
+
+// RESPONSIVE
+
+@media (max-width: $breakpoint-tablet) {
+    .footer-container {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    // Les quatre blocs passent sur deux colonnes
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .footer-brand, .footer-column {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-small;
+    }
+}

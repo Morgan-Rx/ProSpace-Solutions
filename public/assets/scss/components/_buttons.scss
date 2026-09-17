@@ -1,0 +1,50 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Style commun à tous les boutons et liens ayant l'apparence d'un bouton
+.button {
+    @include button-style;
+    padding: 0.65rem 1rem;
+    border: 1px solid transparent;
+    border-radius: $radius-small;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+}
+
+// Bouton principal
+.button-primary {
+    background-color: $color-primary;
+    color: $color-background-main;
+}
+
+.button-primary:hover {
+    opacity: 0.85;
+}
+
+// Bouton secondaire
+.button-secondary {
+    background-color: $color-background-main;
+    color: $color-primary;
+    border-color: $color-primary;
+}
+
+.button-secondary:hover {
+    background-color: $color-background-secondary;
+}
+
+// Boutons pour retirer ou vider les favoris
+#clear-favorites {
+    color: $color-favorite;
+    border-color: $color-favorite;
+}
+
+#clear-favorites:hover {
+    background-color: $color-favorite-background;
+}
+
+// Rend le bouton visible pour la navigation au clavier
+.button:focus-visible {
+    outline: 2px solid $color-secondary;
+    outline-offset: 2px;
+}

@@ -1,0 +1,25 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+
+html {
+    scroll-padding-top: 150px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: $color-text-main;
+    background-color: $color-background-main;
+}
+
+main {
+    width: 100%;
+    flex: 1;
+}
+
+.container {
+    width: $container;
+    max-width: $container-max-width;
+    margin: 0 auto;
+}

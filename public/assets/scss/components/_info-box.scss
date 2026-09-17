@@ -1,0 +1,36 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+
+// Encadré informatif réutilisé sur plusieurs pages
+.info-box {
+    padding: $spacing-medium;
+    background-color: $color-info-background;
+    border: 1px solid $color-info-border;
+    border-radius: $radius-large;
+}
+
+.info-box h2 {
+    margin-bottom: 0.75rem;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+}
+
+// Contenu avec une icône et du texte
+.info-box-content {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.info-box-content img {
+    width: 16px;
+    height: 16px;
+}
+
+.info-box-content p {
+    font-size: $font-size-sm;
+    color: $color-text-discreet;
+}
+
+.info-box-content strong {
+    color: $color-text-main;
+}
